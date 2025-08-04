@@ -41,3 +41,18 @@
 .ch{
   scale: 1.2;
 }
+
+@media (max-width:580px) {
+  .ul>li{
+    width: 95% !important;
+  }
+  .edit,.del{
+    width: 60px;
+    font-size: 14px;
+  }
+  .input{
+    width: 85%;
+
+  }
+  
+}

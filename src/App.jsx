@@ -35,9 +35,9 @@ function handleChange(index){
 
         <div className='contain mt-5'>
           <h3 className='fs-2'>Enter your task :</h3>
-          <div className='inputdiv row'>
+          <div className='inputdiv row justify-content-center align-items-center'>
           <input className='input form-control mb-2 col-6' type="text" value={input} onChange={(e)=> setInput(e.target.value)} />
-          <button className='btn bg-secondary save text-white ms-5 col-1 ' onClick={Add}>Save</button>
+          <button className='btn bg-secondary save text-white ms-md-5 ms-0 col-1 save ' onClick={Add}>Save</button>
           </div>
         </div>
         <div>
@@ -52,7 +52,7 @@ function handleChange(index){
                 </div>
                <div className='btn-group group'>
                 <button className='btn edit text-white' onClick={()=>edit(t,index)}>Edit</button>
-                <button className='btn btn-danger' onClick={()=>del(index)}>Delete</button>
+                <button className='btn btn-danger del' onClick={()=>del(index)}>Delete</button>
                 </div>
                 </li>
             ))}
