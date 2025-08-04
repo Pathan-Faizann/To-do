@@ -1,0 +1,43 @@
+.heading{
+  background-color: rgb(22, 22, 67);
+}
+.contain{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.inputdiv{
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.input{
+  width: 50%;
+  border: 1px solid gray;
+}
+.save{
+  width: 80px;
+  height: 45px;
+}
+.ul>li{
+  border: 1px solid gray;
+}
+.group{
+  justify-self: end !important;
+  align-self: flex-end !important;
+  align-items: end !important;
+}
+.edit{
+  width: 71.22px;
+  background-color: cornflowerblue;
+  
+}
+.edit:hover{
+  background-color:rgb(58, 122, 240) !important;
+}
+.ch{
+  scale: 1.2;
+}
