@@ -31,7 +31,7 @@
   align-items: end !important;
 }
 .edit{
-  width: 71.22px;
+ 
   background-color: cornflowerblue;
   
 }
@@ -45,14 +45,17 @@
 @media (max-width:580px) {
   .ul>li{
     width: 95% !important;
+    font-size: 16px !important;
   }
-  .edit,.del{
-    width: 60px;
-    font-size: 14px;
+  .group{
+    scale: 0.9;
   }
   .input{
     width: 85%;
 
+  }
+  .save{
+    scale: 0.8;
   }
   
 }

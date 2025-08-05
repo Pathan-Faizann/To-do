@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { RiDeleteBin6Fill } from "react-icons/ri";
+import { MdEdit } from "react-icons/md";
 
 import './App.css'
 
@@ -45,14 +47,14 @@ function handleChange(index){
                      
 
             {Tasks.map((t,index)=>(
-              <li className='list-group-item shadow d-flex align-items-center justify-content-between col-6 w-50 text-start fw-bold' key={index}>
+              <li className='list-group-item shadow d-flex align-items-center justify-content-between col-6 w-50 text-start fw-normal' key={index}>
                 <div className=' d-flex justify-content-center align-items-center'>
                 <input type="checkbox" className='me-2 fs-1 ch' onChange={()=>handleChange(index)} checked={t.Completed} />
                 <span className='text-start' style={{textDecoration : t.Completed? "line-through" : 'none'}}>{t.text }</span>
                 </div>
                <div className='btn-group group'>
-                <button className='btn edit text-white' onClick={()=>edit(t,index)}>Edit</button>
-                <button className='btn btn-danger del' onClick={()=>del(index)}>Delete</button>
+                <button className='btn edit text-white' onClick={()=>edit(t,index)}><MdEdit /></button>
+                <button className='btn btn-danger del' onClick={()=>del(index)}><RiDeleteBin6Fill /></button>
                 </div>
                 </li>
             ))}
