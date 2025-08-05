@@ -24,6 +24,7 @@
 }
 .ul>li{
   border: 1px solid gray;
+  font-size: 18px;
 }
 .group{
   justify-self: end !important;
