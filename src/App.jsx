@@ -12,13 +12,7 @@ function App() {
 });
   const [input,setInput] = useState("")
 
-  // useEffect(() => {
-    
-  //   const stored = localStorage.getItem("Tasks");
-  //   if(stored){
-  //     setTasks(JSON.parse(stored))
-  //   }
-  // }, [])
+
 
   useEffect(() => {
 
