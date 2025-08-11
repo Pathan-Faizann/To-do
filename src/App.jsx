@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import { RiDeleteBin6Fill } from "react-icons/ri";
 import { MdEdit } from "react-icons/md";
 
@@ -8,6 +8,22 @@ import './App.css'
 function App() {
   const [Tasks, setTasks] = useState([])
   const [input,setInput] = useState("")
+
+  useEffect(() => {
+    
+    const stored = localStorage.getItem(Tasks);
+    if(stored){
+      setTasks(JSON.parse(stored))
+    }
+  }, [])
+
+  useEffect(() => {
+
+    localStorage.setItem("Tasks",JSON.parse(Tasks))
+    
+  }, [Tasks])
+  
+  
 
   function Add(){
    
