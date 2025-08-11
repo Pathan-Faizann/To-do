@@ -6,27 +6,30 @@ import './App.css'
 
 
 function App() {
-  const [Tasks, setTasks] = useState([])
+  const [Tasks, setTasks] = useState(() => {
+  const stored = localStorage.getItem("Tasks");
+  return stored ? JSON.parse(stored) : [];
+});
   const [input,setInput] = useState("")
 
-  useEffect(() => {
+  // useEffect(() => {
     
-    const stored = localStorage.getItem(Tasks);
-    if(stored){
-      setTasks(JSON.parse(stored))
-    }
-  }, [])
+  //   const stored = localStorage.getItem("Tasks");
+  //   if(stored){
+  //     setTasks(JSON.parse(stored))
+  //   }
+  // }, [])
 
   useEffect(() => {
 
-    localStorage.setItem("Tasks",JSON.parse(Tasks))
+    localStorage.setItem("Tasks",JSON.stringify(Tasks))
     
   }, [Tasks])
   
   
 
   function Add(){
-   
+        if (input.trim() === "") return;
         setTasks([...Tasks,{text:input,Completed:false}])
         setInput("")
   
